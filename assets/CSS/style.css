@@ -10,13 +10,17 @@ h1 {
     margin-bottom: 15px;
 }
 
+/*sets the styling of the main quiz area */
 .quiz-container {
+    height: 80%;
+    width: 80%;
     border: 2px solid darkslategray;
     padding: 20px;
     text-align: center;
     margin-bottom: 15px;
 }
 
+/* sets the styling of the score area */
 .score-area {
     padding: 15px;
     text-align: center;
