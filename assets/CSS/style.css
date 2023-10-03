@@ -1,0 +1,24 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+h1 {
+    margin-bottom: 15px;
+}
+
+.quiz-container {
+    border: 2px solid darkslategray;
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.score-area {
+    padding: 15px;
+    text-align: center;
+    margin-bottom: 15px;
+}
