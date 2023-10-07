@@ -30,6 +30,12 @@ h1 {
     flex: 1;
 }
 
+#logo-image {
+    height: 30vh;
+    width: 30vw;
+    margin-top: 5vh;
+}
+
 /* sets the styling of the score area */
 .score-area {
     display: flex;

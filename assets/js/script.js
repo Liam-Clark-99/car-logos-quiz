@@ -1,7 +1,7 @@
 const logos = [
     { src: "/assets/images/audi-logo.jpg", name: "Audi" },
-    { src: "/assets/images/bentley.logo.jpg", name: "Bentley" },
-    { src: "/assets/images/chevrolet.logo.jpg", name: "Chevrolet" },
+    { src: "/assets/images/bentley-logo.jpg", name: "Bentley" },
+    { src: "/assets/images/chevrolet-logo.jpg", name: "Chevrolet" },
     { src: "/assets/images/citroen-logo.jpg", name: "Citroen" },
     { src: "/assets/images/dodge-logo.jpg", name: "Dodge" },
     { src: "/assets/images/ferrari-logo.jpg", name: "Ferrari" },
