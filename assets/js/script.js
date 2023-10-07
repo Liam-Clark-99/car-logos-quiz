@@ -22,3 +22,7 @@ function updateQuestion() {
     console.log(randomLogo.src);
     document.getElementById("logo-image").src = randomLogo.src;
 }
+
+window.onload = function () {
+    updateQuestion();
+};
