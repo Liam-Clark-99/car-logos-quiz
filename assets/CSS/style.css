@@ -33,3 +33,8 @@ h1 {
     width: 50%;
     margin: 0 auto;
 }
+
+#question-number-span {
+    font-size: 3vw;
+    font-weight: bold;
+}
