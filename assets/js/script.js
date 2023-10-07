@@ -11,14 +11,17 @@ const logos = [
     { src: "/assets/images/toyota-logo.jpg", name: "Toyota" }
 ];
 
+let questionNumber = 1;
 let correctScore = 0;
 let incorrectScore = 0;
+const questionNumberSpan = document.getElementById("question-number");
 const answerButtons = document.querySelectorAll('.answer-button');
 
 function updateQuestion() {
     const shuffledLogos = logos.sort(() => Math.random() - 0.5);
     const correctAnswerIndex = Math.floor(Math.random() * 4);
 
+    questionNumberSpan.textContent = questionNumber;
     answerButtons.forEach((button, index) => {
         button.textContent = shuffledLogos[index].name;
         button.dataset.correct = (index === correctAnswerIndex).toString();
@@ -50,6 +53,7 @@ function selectAnswer(event) {
     }
 
     updateScore(correct);
+    questionNumber++;
     updateQuestion();
 }
 
