@@ -23,26 +23,28 @@ function shuffleArray(array) {
 
 function updateQuestion() {
     const shuffledLogos = shuffleArray(logos);
-    const randomLogo = shuffledLogos[0]; // Take the first logo from the shuffled array
-    console.log(randomLogo.name);
-    console.log(randomLogo.src);
-    document.getElementById("logo-image").src = randomLogo.src;
+    const correctAnswerIndex = Math.floor(Math.random() * answerButtons.length);
 
-    // Populate answer buttons
-    shuffledLogos.forEach((logo, index) => {
-        answerButtons[index].textContent = logo.name;
+    // Shuffle answer buttons
+    const shuffledButtons = shuffleArray(Array.from(answerButtons));
 
-        // Set the correct answer
+    shuffledButtons.forEach((button, index) => {
+        const logoIndex = (correctAnswerIndex + index) % shuffledLogos.length;
+        button.textContent = shuffledLogos[logoIndex].name;
+
         if (index === 0) {
-            answerButtons[index].dataset.correct = 'true';
+            button.dataset.correct = 'true';
         } else {
-            answerButtons[index].dataset.correct = 'false';
+            button.dataset.correct = 'false';
         }
 
-        // Add event listener for answer button click
-        answerButtons[index].addEventListener('click', selectAnswer);
+        button.addEventListener('click', selectAnswer);
     });
+
+    document.getElementById("logo-image").src = shuffledLogos[correctAnswerIndex].src;
 }
+
+
 
 window.onload = function () {
     updateQuestion();
