@@ -11,57 +11,55 @@ const logos = [
     { src: "/assets/images/toyota-logo.jpg", name: "Toyota" }
 ];
 
+let correctScore = 0;
+let incorrectScore = 0;
 const answerButtons = document.querySelectorAll('.answer-button');
 
-function shuffleArray(array) {
-    for (let i = array.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [array[i], array[j]] = [array[j], array[i]];
-    }
-    return array;
-}
-
 function updateQuestion() {
-    const shuffledLogos = shuffleArray(logos);
-    const correctAnswerIndex = Math.floor(Math.random() * answerButtons.length);
+    const shuffledLogos = logos.sort(() => Math.random() - 0.5);
+    const correctAnswerIndex = Math.floor(Math.random() * 4);
 
-    // Shuffle answer buttons
-    const shuffledButtons = shuffleArray(Array.from(answerButtons));
-
-    shuffledButtons.forEach((button, index) => {
-        const logoIndex = (correctAnswerIndex + index) % shuffledLogos.length;
-        button.textContent = shuffledLogos[logoIndex].name;
-
-        if (index === 0) {
-            button.dataset.correct = 'true';
-        } else {
-            button.dataset.correct = 'false';
-        }
-
+    answerButtons.forEach((button, index) => {
+        button.textContent = shuffledLogos[index].name;
+        button.dataset.correct = (index === correctAnswerIndex).toString();
         button.addEventListener('click', selectAnswer);
     });
 
     document.getElementById("logo-image").src = shuffledLogos[correctAnswerIndex].src;
 }
 
+function updateScore(correct) {
+    if (correct) {
+        correctScore++;
+    } else {
+        incorrectScore++;
+    }
 
-
-window.onload = function () {
-    updateQuestion();
-};
+    document.getElementById("correct-score").textContent = correctScore;
+    document.getElementById("incorrect-score").textContent = incorrectScore;
+}
 
 function selectAnswer(event) {
     const selectedButton = event.target;
     const correct = selectedButton.dataset.correct === 'true';
 
     if (correct) {
-        // Handle correct answer logic (e.g., increase score, display feedback)
         console.log('Correct answer!');
     } else {
-        // Handle incorrect answer logic (e.g., display feedback)
         console.log('Incorrect answer. Try again.');
     }
 
-    // After handling the answer, update the question for the next round
+    updateScore(correct);
     updateQuestion();
 }
+
+window.onload = function () {
+    if (answerButtons.length !== 4) {
+        console.error('Invalid number of answer buttons found:', answerButtons.length);
+    } else {
+        answerButtons.forEach(button => {
+            button.addEventListener('click', selectAnswer);
+        });
+        updateQuestion();
+    }
+};
