@@ -25,7 +25,7 @@ h1 {
     border: 2px solid darkslategray;
     padding: 20px;
     text-align: center;
-    margin-bottom: 0 auto;
+    margin: 0 auto;
 }
 
 /* Allows the content inside the quiz area to be correctly spaced */
