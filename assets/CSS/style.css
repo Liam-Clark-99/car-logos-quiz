@@ -12,6 +12,10 @@ h1 {
     font-size: 2rem;
 }
 
+#intro {
+    padding-left: 10px;
+}
+
 /*sets the styling of the main quiz area */
 .quiz-container {
     height: 80vh;
