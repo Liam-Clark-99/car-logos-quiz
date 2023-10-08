@@ -37,13 +37,14 @@ h1 {
 }
 
 #question {
-    font-size: 1rem;
+    font-size: 1.5rem;
 }
 
 #logo-image {
     max-height: 100%;
     max-width: 100%;
     object-fit: cover;
+    padding-top: 5px;
 }
 
 /* sets the styling of the score area */
@@ -139,6 +140,14 @@ h1 {
 }
 
 @media screen and (min-width:1024px) and (max-width:1439px) {
+    #intro {
+        font-size: 1rem;
+    }
+
+    #question {
+        font-size: 2rem;
+    }
+
     .answer-button {
         margin-top: 10px;
     }
@@ -162,9 +171,21 @@ h1 {
         right: 20%;
         bottom: 15%;
     }
+
+    .score-area {
+        font-size: 1.5rem;
+    }
 }
 
-@media screen and (min-width:1440px) {
+@media screen and (min-width:1440px) and (max-width:2559px) {
+    #intro {
+        font-size: 1.5rem;
+    }
+
+    #question {
+        font-size: 2rem;
+    }
+
     .answer-button {
         font-size: larger;
         margin-top: 40px;
@@ -188,5 +209,47 @@ h1 {
     #option-4 {
         right: 20%;
         bottom: 15%;
+    }
+
+    .score-area {
+        font-size: 2rem;
+    }
+}
+
+@media screen and (min-width:2560px) {
+    h1 {
+        font-size: 6rem;
+    }
+
+    #intro {
+        font-size: 3rem;
+    }
+
+    #question {
+        font-size: 4rem;
+    }
+
+    .answer-button {
+        font-size: 3rem;
+    }
+
+    #option-1 {
+        margin-top: 5vh;
+    }
+
+    #option-2 {
+        margin-top: 5vh;
+    }
+
+    #option-3 {
+        margin-top: 5vh;
+    }
+
+    #option-4 {
+        margin-top: 5vh;
+    }
+
+    .score-area {
+        font-size: 2rem;
     }
 }
