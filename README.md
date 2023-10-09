@@ -47,3 +47,5 @@ The link to the live deployment can be found [here:](https://liam-clark-99.githu
 This project was loosely inspired by The Code Institute's Love Maths project.
 
 Many of the javascript coding was influenced by the supporting material from Code Institute and the learning material provided on [MDN Web Docs](https://developer.mozilla.org/en-US/).
+
+Developer tools and ChatGPT were used on occassion to efficiently help debug code and identify syntax errors in the JavaScript code. 
