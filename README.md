@@ -1,6 +1,9 @@
 # Car Logo Quiz
 
-Test your knowledge of car brands with this interactive logo quiz game! Guess the car brand based on its logo and see how many you can get right. Have fun and challenge your friends to beat your score!
+Welcome to the Car Logo Quiz, an exciting interactive game that challenges your knowledge of car brands! Are you a car enthusiast? Do you think you can recognize different car logos with just a glance? Put your skills to the test and enjoy this fun-filled quiz designed to challenge your automotive expertise.
+
+How to Play:
+In this quiz, you'll be presented with various car logos, and your task is to guess the brand associated with each logo. Click on the interactive buttons to submit your answers and see how many you can get right! Whether you're a car aficionado or just looking for a fun way to pass the time, this quiz is perfect for everyone.
 
 ![url](assets/images/amiresponsive.png)
 
@@ -11,12 +14,14 @@ Test your knowledge of car brands with this interactive logo quiz game! Guess th
 - Dynamic score tracking for correct and incorrect answers.
 - Responsive design for various screen sizes.
 
-## Validator Testing
+## Testing
 
 - I used W3C HTML validator to ensure all of my HTML code was error free
 - I used W3C CSS validator to ensure that all of my CSS code was error free
 - I used JSHint to ensure that there were no major errors in my JavaScript code
 - I used lighthouse in developer tools to anayse performance and accessibility
+- I tested the deployed website on different web browsers to ensure consistent performance
+- I used the common breakpoints to ensure the formatting was adjusted to different screen sizes. 
   
   ![url](assets/images/lighthouse.png)
 
@@ -29,6 +34,13 @@ The Car Logo Quiz website was deployed on GitHub pages using the folllowing step
 3. The link to the live website is then provided
 
 The link to the live deployment can be found [here:](https://liam-clark-99.github.io/car-logos-quiz/)
+
+## Future Improvements
+
+- I would have liked to add a timer to the quiz to create a sense of urgency and apply some pressure to thr user
+- The quiz could have benefitted from a larger database of logos to be chosen to have more variety
+- More styling would be a big improvement to make it more aesthetically pleasing
+
 
 ## Credits
 
